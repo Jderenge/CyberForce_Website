@@ -1,13 +1,13 @@
 <?php
 
 //Server
-$server = 10.0.5.73;
+$server = '10.0.5.73';
 
 $username = "root";
 
 $passsword = "password";
 
-$conn = new mysqli($servername, $username, $passsword);
+$conn = new mysqli($server, $username, $passsword);
 
 //Connection
 if($conn -> connection_error){
