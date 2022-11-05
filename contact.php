@@ -53,7 +53,7 @@
         $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
         $login = ftp_login($ftp_conn, $ftp_username, $ftp_userpass);
 
-
+        $file = serverfile.txt
         // upload file
         if (ftp_put($ftp_conn, "C:/Users/serverfile.txt", $file, FTP_ASCII))
         {

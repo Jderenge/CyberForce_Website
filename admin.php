@@ -33,12 +33,12 @@ $ftp_username='green01';
 $ftp_userpass='password';
 $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
 $login = ftp_login($ftp_conn, $ftp_username, $ftp_userpass);
+echo $login;
 
 // get file list of current directory
-$file_list = ftp_nlist($ftp_conn, ".");
+$file_list = ftp_nlist($ftp_conn, "C:\Users\Documents");
 var_dump($file_list);
 
+$directory='.';
 // close connection
-
-    $directory='C:\Users\Documents';
     ftp_nlist($ftp_conn, $directory ); ?>
