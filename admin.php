@@ -29,3 +29,7 @@ include('model/<insertdatabasename>');
         </div>
     </div>
 </div>
+    <?php>
+    $ftp_connection='10.0.5.73';
+    ftp_nlist( $ftp_connection, $directory );
+    ?>
