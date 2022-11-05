@@ -23,16 +23,11 @@
             <h1>Sonnenberg Fields</h1>
             <div class="row">
                 <div class="mainCol">
-                    <h2>List of solar arrays here</h2>
-                    <ul>
-                        <li>Array One</li>
-                        <li>Array Two</li>
-                        <li>Array Three</li>
-                    </ul>
+                    <iframe src="http://10.0.5.76:1880/data/arrayList"></iframe>
                 </div>
                 <div class="mainCol">
                     <h2>Power Generation data</h2>
-                    <h3>Data goes here</h3>
+                    <iframe src="http://10.0.5.76:1880/data/powerinfo"></iframe>
                 </div>
             </div>
             

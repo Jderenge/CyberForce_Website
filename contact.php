@@ -48,15 +48,14 @@
         <?php
         // connect and login to FTP server
         $ftp_server = "10.0.5.73";
-        $ftp_username = 'root';
+        $ftp_username = 'green01';
         $ftp_userpass = 'password';
         $ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
         $login = ftp_login($ftp_conn, $ftp_username, $ftp_userpass);
 
-        $file = "localfile.txt";
 
         // upload file
-        if (ftp_put($ftp_conn, "serverfile.txt", $file, FTP_ASCII))
+        if (ftp_put($ftp_conn, "C:/Users/serverfile.txt", $file, FTP_ASCII))
         {
             echo "Successfully uploaded $file.";
         }
@@ -68,13 +67,3 @@
         // close connection
         ftp_close($ftp_conn);
         ?>
-        <div class="col">
-            <ul>
-                <li onclick="window.location.href = 'contact.php'">Contact Us</li>
-                <li onclick="window.location.href = 'manufacturing.php'">Manufacturing</li>
-                <li onclick="window.location.href = 'solar.php'">Solar Generation</li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>

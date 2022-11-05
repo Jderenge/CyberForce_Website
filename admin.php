@@ -1,3 +1,4 @@
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,13 +19,26 @@
 <div id="page">
     <div class="row">
         <div class="mainCol">
-            <h1 sex </h1>
+            <h1> </h1>
         <div class="mainCol">
 
         </div>
     </div>
 </div>
-    <?php>
-    $ftp_connection='10.0.5.73';
-    ftp_nlist( $ftp_connection, $directory );
-    ?>
+
+<?php
+// connect and login to FTP server
+$ftp_server = "10.0.5.73";
+$ftp_username='green01';
+$ftp_userpass='password';
+$ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
+$login = ftp_login($ftp_conn, $ftp_username, $ftp_userpass);
+
+// get file list of current directory
+$file_list = ftp_nlist($ftp_conn, ".");
+var_dump($file_list);
+
+// close connection
+
+    $directory='C:\Users\Documents';
+    ftp_nlist($ftp_conn, $directory ); ?>

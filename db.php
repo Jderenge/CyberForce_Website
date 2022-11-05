@@ -3,9 +3,9 @@
 //Server
 $server = '10.0.5.73';
 
-$username = "root";
+$username = 'root';
 
-$passsword = "password";
+$passsword = '';
 
 $conn = new mysqli($server, $username, $passsword);
 
